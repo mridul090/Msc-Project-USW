@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from drf_spectacular.utils import extend_schema
-from BackendAPIs.BackendModels.blog_models import BlogPost, Tag, Category
+from BackendAPIs.BackendModels.blog_model import BlogPost, Tag, Category
 from BackendAPIs.Serializers.blog_serializers import BlogPostSerializer, CategorySerializer, TagSerializer
 
 # Create your views here.

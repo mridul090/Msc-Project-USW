@@ -8,3 +8,5 @@ htmlcov/
 *-commands.md
 schema.yml
 test/
+ImportantNote.txt
+testEnv/

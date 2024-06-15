@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from BackendAPIs.BackendModels.blog_models import BlogPost, Tag, Category
+from BackendAPIs.BackendModels.blog_model import BlogPost, Tag, Category
 # from django.contrib.auth.models import User
 
 
