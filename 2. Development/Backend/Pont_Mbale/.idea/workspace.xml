@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93ac8dab-7cae-4db9-8f79-66c68486a49d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BackendAPIs/BackendModels/contractus_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackendAPIs/Routes/contractus_urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackendAPIs/Serializers/contractus_serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackendAPIs/Views/contractus_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendAPIs/BackendModels/blog_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/BackendModels/blog_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendAPIs/Serializers/blog_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/Serializers/blog_serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendAPIs/Views/blog_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/Views/blog_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendAPIs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImportantNote.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ImportantNote.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pont_Mbale/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pont_Mbale/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/Views/contractus_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/Views/contractus_views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,16 +39,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.Pont_Mbale.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Dev",
-    "last_opened_file_path": "C:/Others/Msc Computer Science/Msc-Project-USW/2. Development/Backend/Pont_Mbale",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Pont_Mbale.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Others/Msc Computer Science/Msc-Project-USW/2. Development/Backend/Pont_Mbale&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Others\Msc Computer Science\Msc-Project-USW\2. Development\Backend\Pont_Mbale\BackendAPIs\BackendModels" />
