@@ -22,8 +22,8 @@ def create_contract_us(request):
 @api_view(['GET'])
 # @permission_classes([IsAuthenticated])
 def contact_us_list(request):
-    contacts = ContactUs.objects.all()
-    serializer = ContactUsSerializer(contacts, many=True)
+    contacts = ContractUs.objects.all()
+    serializer = ContractUsSerializers(contacts, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 @api_view(['POST'])
