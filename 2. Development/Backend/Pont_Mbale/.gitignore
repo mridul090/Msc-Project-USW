@@ -10,3 +10,4 @@ schema.yml
 test/
 ImportantNote.txt
 testEnv/
+migrations/
