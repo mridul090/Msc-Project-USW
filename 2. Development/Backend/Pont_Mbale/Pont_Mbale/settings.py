@@ -76,13 +76,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Pont_Mbale.wsgi.application'
 # Configaration of email
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #To see the email output in the console.
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your-email@example.com'
-EMAIL_HOST_PASSWORD = 'your-email-password'
-DEFAULT_FROM_EMAIL = 'your-email@example.com'
+EMAIL_HOST_USER = 'generalusetest24@gmail.com'
+EMAIL_HOST_PASSWORD = '#Asdfghjkl24@'
+DEFAULT_FROM_EMAIL = 'generalusetest24@gmail.com'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -148,4 +149,5 @@ SPECTACULAR_SETTINGS = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://localhost:8080",
 ]

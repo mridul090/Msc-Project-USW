@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93ac8dab-7cae-4db9-8f79-66c68486a49d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Pont_Mbale.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pont_Mbale.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/BackendModels/blog_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/BackendModels/blog_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/BackendModels/contractus_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/BackendModels/contractus_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackendAPIs/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/migrations/0002_contractus.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/migrations/0003_alter_contractus_created_at.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/migrations/0004_alter_contractus_created_at.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/migrations/0005_alter_contractus_created_at.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendAPIs/migrations/0006_alter_contractus_created_at.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ImportantNote.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ImportantNote.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pont_Mbale/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pont_Mbale/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pont_Mbale/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pont_Mbale/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +63,7 @@
     &quot;Python.Pont_Mbale.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Others/Msc Computer Science/Msc-Project-USW/2. Development/Backend/Pont_Mbale&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Others/Msc Computer Science/Msc-Project-USW/2. Development/Backend/Pont_Mbale/VirtualEnv&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -68,13 +86,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.8 (Pont_Mbale)" />
+      <option name="SDK_NAME" value="Python 3.8 (Pont_Mbale) (2)" />
       <option name="WORKING_DIRECTORY" value="C:\Others\Msc Computer Science\Msc-Project-USW\2. Development\Backend\Pont_Mbale" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
-      <option name="PARAMETERS" value="manage.py runserver" />
+      <option name="PARAMETERS" value="runserver" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />

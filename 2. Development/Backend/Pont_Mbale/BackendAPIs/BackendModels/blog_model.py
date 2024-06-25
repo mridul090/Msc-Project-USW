@@ -23,6 +23,8 @@ class BlogPost(models.Model):
     class Meta:
         ordering = ['-created_at']
         unique_together = ('title', 'slug')
+        verbose_name = "Blog Post"
+        verbose_name_plural = "Blog Posts"
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -36,6 +38,9 @@ class Tag(models.Model):
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=50, unique=True)
 
+    class Meta:
+        verbose_name = "Tag"
+        verbose_name_plural = "Tags"
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
@@ -47,5 +52,10 @@ class Tag(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=50, unique=True)
 
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+
     def __str__(self):
         return self.name
+

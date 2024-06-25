@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
-
+admin.site.site_header = "PONT MBALE"
+admin.site.site_title = "Pont Mbale Admin"
+admin.site.index_title = "Pont Mbale Administration"
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('api/test/', include('test.urls')),
