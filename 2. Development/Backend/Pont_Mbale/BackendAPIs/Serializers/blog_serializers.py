@@ -1,5 +1,8 @@
 from rest_framework import serializers
 from BackendAPIs.BackendModels.blog_model import BlogPost, Tag, Category
+from BackendAPIs.BackendModels.setting_model import ImageLibrary
+from BackendAPIs.Serializers.setting_serializers import ImageLibrarySerializers
+from django.utils import timezone
 # from django.contrib.auth.models import User
 
 
@@ -12,7 +15,7 @@ class TagSerializer(serializers.ModelSerializer):
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ['name']
+        fields = ['id', 'name']
 
 
 # class UserSerializer(serializers.ModelSerializer):
@@ -20,58 +23,75 @@ class CategorySerializer(serializers.ModelSerializer):
 #         model = User
 #         fields = ['id', 'username', 'email']
 
+class BlogPostSerializerView(serializers.ModelSerializer):
 
-class BlogPostSerializer(serializers.ModelSerializer):
-    # author = UserSerializer(read_only=True)
-    tags = TagSerializer(many=True, required=False)
-    category = CategorySerializer(required=False)
+    image_field_1 = ImageLibrarySerializers(read_only=True)
+    image_field_2 = ImageLibrarySerializers(read_only=True)
+    image_field_3 = ImageLibrarySerializers(read_only=True)
+    image_field_4 = ImageLibrarySerializers(read_only=True)
+    image_field_5 = ImageLibrarySerializers(read_only=True)
+    image_field_6 = ImageLibrarySerializers(read_only=True)
+    image_field_7 = ImageLibrarySerializers(read_only=True)
+    image_field_8 = ImageLibrarySerializers(read_only=True)
+
+
     slug = serializers.SlugField(read_only=True)
 
     class Meta:
         model = BlogPost
         fields = [
             'id', 'title', 'content',
-            # 'author',
             'created_at', 'updated_at', 'slug',
-            'status', 'tags', 'category'
+            'status', 'category',
+            'image_field_1', 'image_field_2', 'image_field_3', 'image_field_4',
+            'image_field_5', 'image_field_6', 'image_field_7', 'image_field_8'
+        ]
+
+class BlogPostSerializer(serializers.ModelSerializer):
+    category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all(), required=False, allow_null=True)
+
+    image_field_1 = serializers.PrimaryKeyRelatedField(queryset=ImageLibrary.objects.all(), required=False, allow_null=True)
+    image_field_2 = serializers.PrimaryKeyRelatedField(queryset=ImageLibrary.objects.all(), required=False, allow_null=True)
+    image_field_3 = serializers.PrimaryKeyRelatedField(queryset=ImageLibrary.objects.all(), required=False, allow_null=True)
+    image_field_4 = serializers.PrimaryKeyRelatedField(queryset=ImageLibrary.objects.all(), required=False, allow_null=True)
+    image_field_5 = serializers.PrimaryKeyRelatedField(queryset=ImageLibrary.objects.all(), required=False, allow_null=True)
+    image_field_6 = serializers.PrimaryKeyRelatedField(queryset=ImageLibrary.objects.all(), required=False, allow_null=True)
+    image_field_7 = serializers.PrimaryKeyRelatedField(queryset=ImageLibrary.objects.all(), required=False, allow_null=True)
+    image_field_8 = serializers.PrimaryKeyRelatedField(queryset=ImageLibrary.objects.all(), required=False, allow_null=True)
+
+    slug = serializers.SlugField(read_only=True)
+
+    class Meta:
+        model = BlogPost
+        fields = [
+            'id', 'title', 'content',
+            'created_at', 'updated_at', 'slug',
+            'status', 'category',
+            'image_field_1', 'image_field_2', 'image_field_3', 'image_field_4',
+            'image_field_5', 'image_field_6', 'image_field_7', 'image_field_8'
         ]
 
     def create(self, validated_data):
-        tags_data = validated_data.pop('tags', [])
-        category_data = validated_data.pop('category', None)
-        request = self.context.get('request', None)
-        # author = request.user if request else None
-        # blog_post = BlogPost.objects.create(author=author, **validated_data)
-        blog_post = BlogPost.objects.create(author=None, **validated_data)
-
-        for tag_data in tags_data:
-            tag, created = Tag.objects.get_or_create(**tag_data)
-            blog_post.tags.add(tag)
-
-        if category_data:
-            category, created = Category.objects.get_or_create(**category_data)
-            blog_post.category = category
-            blog_post.save()
-
+        blog_post = BlogPost.objects.create(**validated_data)
+        blog_post.save()
         return blog_post
 
     def update(self, instance, validated_data):
-        tags_data = validated_data.pop('tags', [])
-        category_data = validated_data.pop('category', None)
-
         instance.title = validated_data.get('title', instance.title)
         instance.content = validated_data.get('content', instance.content)
         instance.status = validated_data.get('status', instance.status)
-        instance.save()
-
-        instance.tags.clear()
-        for tag_data in tags_data:
-            tag, created = Tag.objects.get_or_create(**tag_data)
-            instance.tags.add(tag)
-
-        if category_data:
-            category, created = Category.objects.get_or_create(**category_data)
-            instance.category = category
-
+        instance.category = validated_data.get('category', instance.category)
+        instance.image_field_1 = validated_data.get('image_field_1', instance.image_field_1)
+        instance.image_field_2 = validated_data.get('image_field_2', instance.image_field_2)
+        instance.image_field_3 = validated_data.get('image_field_3', instance.image_field_3)
+        instance.image_field_4 = validated_data.get('image_field_4', instance.image_field_4)
+        instance.image_field_5 = validated_data.get('image_field_5', instance.image_field_5)
+        instance.image_field_6 = validated_data.get('image_field_6', instance.image_field_6)
+        instance.image_field_7 = validated_data.get('image_field_7', instance.image_field_7)
+        instance.image_field_8 = validated_data.get('image_field_8', instance.image_field_8)
+        instance.updated_at = timezone.now()
         instance.save()
         return instance
+
+
+

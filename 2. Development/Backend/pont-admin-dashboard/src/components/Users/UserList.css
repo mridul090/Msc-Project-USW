@@ -1,0 +1,91 @@
+.container {
+  width: 100%;
+
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.container {
+  min-height: 90vh;
+  min-width: 110vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+.register-button {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.register-button button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #1E9370;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;    
+}
+
+.register-button button:hover {
+  background-color: #155a4d;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: gray;
+  margin: 20px 0;
+}
+
+.users-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.user-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: calc(25% - 20px);
+  box-sizing: border-box;
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.user-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #343a40;
+  word-break: break-word;
+}
+
+.user-card p {
+  margin: 5px 0;
+  color: #495057;
+  word-break: break-word;
+}
+
+.user-card strong {
+  color: #212529;
+}

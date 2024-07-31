@@ -2,8 +2,9 @@ from django.db import models
 # from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.utils import timezone
+from BackendAPIs.BackendModels.setting_model import ImageLibrary
 
-# Create your models here.
+
 class BlogPost(models.Model):
     STATUS_CHOICES = (
         ('draft', 'Draft'),
@@ -17,8 +18,17 @@ class BlogPost(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     slug = models.SlugField(max_length=200, unique=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
-    tags = models.ManyToManyField('Tag', blank=True)
+    # tags = models.ManyToManyField('Tag', blank=True)
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True, blank=True)
+    image_field_1 = models.ForeignKey('ImageLibrary', on_delete=models.SET_NULL, null=True, blank=True, related_name='blogpost_image_1')
+    image_field_2 = models.ForeignKey('ImageLibrary', on_delete=models.SET_NULL, null=True, blank=True, related_name='blogpost_image_2')
+    image_field_3 = models.ForeignKey('ImageLibrary', on_delete=models.SET_NULL, null=True, blank=True, related_name='blogpost_image_3')
+    image_field_4 = models.ForeignKey('ImageLibrary', on_delete=models.SET_NULL, null=True, blank=True, related_name='blogpost_image_4')
+    image_field_5 = models.ForeignKey('ImageLibrary', on_delete=models.SET_NULL, null=True, blank=True, related_name='blogpost_image_5')
+    image_field_6 = models.ForeignKey('ImageLibrary', on_delete=models.SET_NULL, null=True, blank=True, related_name='blogpost_image_6')
+    image_field_7 = models.ForeignKey('ImageLibrary', on_delete=models.SET_NULL, null=True, blank=True, related_name='blogpost_image_7')
+    image_field_8 = models.ForeignKey('ImageLibrary', on_delete=models.SET_NULL, null=True, blank=True, related_name='blogpost_image_8')
+
 
     class Meta:
         ordering = ['-created_at']

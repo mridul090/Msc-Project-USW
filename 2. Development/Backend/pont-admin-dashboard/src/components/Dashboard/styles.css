@@ -1,0 +1,10 @@
+/* src/components/Dashboard/styles.css */
+.dashboard {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .contracts {
+    margin-bottom: 20px;
+  }
+  

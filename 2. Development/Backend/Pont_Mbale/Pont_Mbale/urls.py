@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
+from django.conf import settings
+from django.conf.urls.static import static
 
 admin.site.site_header = "PONT MBALE"
 admin.site.site_title = "Pont Mbale Admin"
@@ -26,7 +28,20 @@ urlpatterns = [
     # path('api/test/', include('test.urls')),
     path('api/', include('BackendAPIs.Routes.blog_urls')),
     path('api/', include('BackendAPIs.Routes.contractus_urls')),
+    path('api/', include('BackendAPIs.Routes.setting_urls')),
+    path('api/', include('BackendAPIs.Routes.registeruser_urls')),
+    path('api/', include('BackendAPIs.Routes.userlogin_urls')),
+    path('api/', include('BackendAPIs.Routes.About_Pont.about_urls')),
+    path('api/', include('BackendAPIs.Routes.About_Pont.historycontent_urls')),
+    path('api/', include('BackendAPIs.Routes.Projects.progressbar_urls')),
+    path('api/', include('BackendAPIs.Routes.Projects.project_urls')),
+    path('api/', include('BackendAPIs.Routes.Projects.ProjectContent_urls')),
+    path('api/', include('BackendAPIs.Routes.contentgallery_urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/schema/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
